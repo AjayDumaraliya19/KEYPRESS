@@ -1,10 +1,10 @@
 require("colors");
 require("./db/dbconnection");
+require("./routes/createTable");
 const bodyParser = require("body-parser");
 const express = require("express");
 const cors = require("cors");
 const config = require("./config/config");
-const routes = require("./routes/v1");
 
 /* ------------------ Create the Express function variable ------------------ */
 const app = express();
@@ -19,7 +19,7 @@ app.use(bodyParser.json({ limit: "5mb" }));
 app.use(bodyParser.urlencoded({ extended: false, limit: "5mb" }));
 
 /* ----------------------------- Connect routes ----------------------------- */
-app.use("/v1", routes);
+// app.use("/api", createTable);
 
 /* -- Whenever route not create and try to use that route then throw error. - */
 app.all("*", (req, res) => {

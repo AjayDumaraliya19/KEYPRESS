@@ -14,10 +14,6 @@ const envVarsSchema = Joi.object({
   DB_USER: Joi.string().trim().description(`Database user name..!`),
   DB_PASSWORD: Joi.string().trim().description(`Database User password..!`),
   DB_DATABASE: Joi.string().trim().description(`Database name..!`),
-  DB_MULTIPLE_STATEMENTS: Joi.boolean().description(`Statements status..!`),
-  DB_WAIT_FOR_CONNECTIONS: Joi.boolean().description(`Connection status..!`),
-  CONNECTION_LIMIT: Joi.number().integer().description(`Connection limit..!`),
-  QUERY_LIMIT: Joi.number().integer().description(`database Query limit..!`),
 }).unknown();
 
 /* --------------------- Environment variable validation -------------------- */
@@ -40,9 +36,5 @@ module.exports = {
     username: envVars.DB_USER,
     password: envVars.DB_PASSWORD,
     database: envVars.DB_DATABASE,
-    multipleStatements: envVars.DB_MULTIPLE_STATEMENTS,
-    waitForConnections: envVars.DB_WAIT_FOR_CONNECTIONS,
-    connectionLimit: envVars.CONNECTION_LIMIT,
-    queryLimit: envVars.QUERY_LIMIT,
   },
 };

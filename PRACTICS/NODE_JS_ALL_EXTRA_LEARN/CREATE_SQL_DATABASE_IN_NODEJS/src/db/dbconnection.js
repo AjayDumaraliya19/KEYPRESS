@@ -2,7 +2,7 @@ const mysql = require("mysql2");
 const config = require("../config/config");
 
 /* ------------- Create the pool for the sql database connection ------------ */
-const pool = mysql.createPool({
+const pool = mysql.createConnection({
   host: config.sql.host,
   port: config.sql.port,
   user: config.sql.username,
@@ -14,18 +14,4 @@ const pool = mysql.createPool({
   queueLimit: config.sql.queryLimit,
 });
 
-/* --------------------------- Database connection -------------------------- */
-pool.getConnection(async function () {
-  try {
-    /** This will throw an error if there is a problem with the connection */
-    await pool.promise();
-    console.log(
-      `MySQL ${config.sql.database} database connection successfully..!`
-        .bgYellow
-    );
-  } catch (err) {
-    console.error(
-      "Database connection error: " + JSON.stringify(err.message, undefined, 2)
-    );
-  }
-});
+module.exports = pool;
