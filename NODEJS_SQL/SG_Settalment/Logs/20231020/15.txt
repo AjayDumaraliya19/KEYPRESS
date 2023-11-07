@@ -1,0 +1,33 @@
+===== END Settlment RoundID : 10966 =====
+
+
+====== Start settlement RoundId : 10966 =====
+     ===== PlayerId : 1  PlayerName : Ap11 =====
+     	 2023-10-20T10:20:53.243Z : Insert Tran       :  {"PlayerId":1,"PartnerId":1,"TransactionType":2,"Amount":"0.00","Status":0,"RoundId":10966,"TicketId":null,"CreatedBy":1}
+     	 2023-10-20T10:20:53.434Z : Res Insert Tran   :  4891
+     	 2023-10-20T10:20:53.434Z : Request Credit    :  {"player":{"id":"Ap11","currency":"AUD"},"game":[{"roundId":"10966","name":"Teen Patti","code":"TP","event":"Lose"}],"transaction":{"id":"4891","referenceId":null,"ticketId":null,"amount":0},"timestamp":1697797253}
+     	 2023-10-20T10:20:58.380Z : Response Credit   :  {"StatusCode":0,"StatusMessage":"SUCCESS"}
+     	 2023-10-20T10:20:53.434Z : Update Tran       :  4891
+     	 2023-10-20T10:20:58.380Z : Update Tran       :  {"error":{},"data":null}
+====== Start settlement RoundId : 10966 =====
+     ===== PlayerId : 1  PlayerName : Ap11 =====
+     	 2023-10-20T10:20:58.248Z : Insert Tran       :  {"PlayerId":1,"PartnerId":1,"TransactionType":2,"Amount":"0.00","Status":0,"RoundId":10966,"TicketId":null,"CreatedBy":1}
+     	 2023-10-20T10:20:58.449Z : Res Insert Tran   :  4892
+     	 2023-10-20T10:20:58.449Z : Request Credit    :  {"player":{"id":"Ap11","currency":"AUD"},"game":[{"roundId":"10966","name":"Teen Patti","code":"TP","event":"Lose"}],"transaction":{"id":"4892","referenceId":null,"ticketId":null,"amount":0},"timestamp":1697797258}
+     	 2023-10-20T10:20:59.029Z : Response Credit   :  {"StatusCode":0,"StatusMessage":"SUCCESS"}
+     	 2023-10-20T10:20:58.449Z : Update Tran       :  4892
+     	 2023-10-20T10:20:59.029Z : Update Tran       :  {"error":{},"data":null}
+===== END Settlment RoundID : 10966 =====
+
+
+====== Start settlement RoundId : 10966 =====
+     ===== PlayerId : 1  PlayerName : Ap11 =====
+     	 2023-10-20T10:21:03.261Z : Insert Tran       :  {"PlayerId":1,"PartnerId":1,"TransactionType":2,"Amount":"0.00","Status":0,"RoundId":10966,"TicketId":null,"CreatedBy":1}
+     	 2023-10-20T10:21:03.472Z : Res Insert Tran   :  4893
+     	 2023-10-20T10:21:03.472Z : Request Credit    :  {"player":{"id":"Ap11","currency":"AUD"},"game":[{"roundId":"10966","name":"Teen Patti","code":"TP","event":"Lose"}],"transaction":{"id":"4893","referenceId":null,"ticketId":null,"amount":0},"timestamp":1697797263}
+     	 2023-10-20T10:21:04.205Z : Response Credit   :  {"StatusCode":0,"StatusMessage":"SUCCESS"}
+     	 2023-10-20T10:21:03.472Z : Update Tran       :  4893
+     	 2023-10-20T10:21:04.205Z : Update Tran       :  {"error":{},"data":null}
+===== END Settlment RoundID : 10966 =====
+
+

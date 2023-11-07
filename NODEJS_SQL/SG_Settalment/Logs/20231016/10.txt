@@ -1,0 +1,11 @@
+====== Start settlement RoundId : 10966 =====
+     ===== PlayerId : 1  PlayerName : Ap11 =====
+     	 2023-10-16T05:29:11.109Z : Insert Tran       :  {"PlayerId":1,"PartnerId":1,"TransactionType":2,"Amount":"0.00","Status":0,"RoundId":10966,"TicketId":null,"CreatedBy":1}
+     	 2023-10-16T05:29:11.276Z : Res Insert Tran   :  2876
+     	 2023-10-16T05:29:11.276Z : Request Credit    :  {"player":{"id":"Ap11","currency":"AUD"},"game":[{"roundId":"10966","name":"Teen Patti","code":"TP","event":"Lose"}],"transaction":{"id":"2876","referenceId":null,"ticketId":null,"amount":0},"timestamp":1697434151}
+     	 2023-10-16T05:29:11.869Z : Response Credit   :  {"StatusCode":0,"StatusMessage":"SUCCESS"}
+     	 2023-10-16T05:29:11.276Z : Update Tran       :  2876
+     	 2023-10-16T05:29:11.869Z : Update Tran       :  {"error":{},"data":null}
+===== END Settlment RoundID : 10966 =====
+
+

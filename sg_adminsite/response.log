@@ -1,0 +1,55 @@
+[2023-10-11T06:43:02.556] [ERROR] default - { StatusCode: 1 }
+[2023-10-11T06:44:28.426] [ERROR] default - { StatusCode: 1 }
+[2023-10-11T06:45:24.693] [ERROR] default - { StatusCode: 1 }
+[2023-10-13T13:10:03.227] [ERROR] default - { StatusCode: 1 }
+[2023-10-13T13:10:16.601] [ERROR] default - { StatusCode: 1 }
+[2023-10-13T13:13:05.869] [ERROR] default - { StatusCode: 1 }
+[2023-10-23T08:47:04.739] [FATAL] default - {
+  request: '{"content-type":"application/json","authorization":"Bearer RaPWd99Po4Urq2PFqZVOcmG2p7UDBmYcpNvkECOal8Gr44EJA4r5QmXAPh47nrTl","user-agent":"PostmanRuntime/7.34.0","accept":"*/*","postman-token":"45bfb5c9-d071-409d-9df0-56a4693a56bc","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"58"}',
+  response: '{"StatusCode":3,"Token":"KJOs1SEqxy3/QmKS6F6eRpiNXGjGyIOJ3fLanMuARSzTb86WJ7SgRVTHyq57dCvY","pages":[{"Username":"AP11","RoleName":"Admin","PageId":1,"ParentId":0,"PageName":"Home","DisplayName":"Dashboard","URL":"/dashboard","icon":"Home","PageAction":15,"DisplayOrder":1},{"Username":"AP11","RoleName":"Admin","PageId":3,"ParentId":0,"PageName":"Game","DisplayName":"Game","URL":"/game","icon":"device-gamepad-2","PageAction":15,"DisplayOrder":2},{"Username":"AP11","RoleName":"Admin","PageId":4,"ParentId":0,"PageName":"partner","DisplayName":"Partner","URL":"/partner","icon":"user","PageAction":15,"DisplayOrder":3},{"Username":"AP11","RoleName":"Admin","PageId":6,"ParentId":0,"PageName":"User","DisplayName":"User","URL":"/user","icon":"users-group","PageAction":15,"DisplayOrder":4},{"Username":"AP11","RoleName":"Admin","PageId":8,"ParentId":0,"PageName":"Page","DisplayName":"Page","URL":"/page","icon":"notebook","PageAction":15,"DisplayOrder":7},{"Username":"AP11","RoleName":"Admin","PageId":9,"ParentId":0,"PageName":"Role ","DisplayName":"Role ","URL":"/role","icon":"user-star","PageAction":15,"DisplayOrder":6},{"Username":"AP11","RoleName":"Admin","PageId":10,"ParentId":0,"PageName":"Currency","DisplayName":"Currency","URL":"/currency","icon":"users-group","PageAction":15,"DisplayOrder":5},{"Username":"AP11","RoleName":"Admin","PageId":11,"ParentId":0,"PageName":"Running Analysis","DisplayName":"Running Analysis","URL":"/runninganalysis","icon":"chart-bar","PageAction":15,"DisplayOrder":8},{"Username":"AP11","RoleName":"Admin","PageId":12,"ParentId":11,"PageName":"TP","DisplayName":"Teen Patti","URL":"/teenpatti","icon":"play-card","PageAction":1,"DisplayOrder":9},{"Username":"AP11","RoleName":"Admin","PageId":16,"ParentId":11,"PageName":"AB","DisplayName":"Andar Bahar","URL":"/andarbahar","icon":"play-card","PageAction":1,"DisplayOrder":13}]}'
+}
+[2023-10-23T08:49:42.488] [FATAL] default - {
+  request: '{"content-type":"application/json","authorization":"Bearer RaPWd99Po4Urq2PFqZVOcmG2p7UDBmYcpNvkECOal8Gr44EJA4r5QmXAPh47nrTl","user-agent":"PostmanRuntime/7.34.0","accept":"*/*","postman-token":"22a36e5b-56b9-47df-b44a-871deb7e53c4","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"58"}',
+  response: '{"StatusCode":3,"Token":"ZA1O9UmbtZ3IopA6gKxYUOfiynh/KfozpKjzQ5zN7yn7bGhe28dgeJ3gKi4dYk+3","pages":[{"Username":"AP11","RoleName":"Admin","PageId":1,"ParentId":0,"PageName":"Home","DisplayName":"Dashboard","URL":"/dashboard","icon":"Home","PageAction":15,"DisplayOrder":1},{"Username":"AP11","RoleName":"Admin","PageId":3,"ParentId":0,"PageName":"Game","DisplayName":"Game","URL":"/game","icon":"device-gamepad-2","PageAction":15,"DisplayOrder":2},{"Username":"AP11","RoleName":"Admin","PageId":4,"ParentId":0,"PageName":"partner","DisplayName":"Partner","URL":"/partner","icon":"user","PageAction":15,"DisplayOrder":3},{"Username":"AP11","RoleName":"Admin","PageId":6,"ParentId":0,"PageName":"User","DisplayName":"User","URL":"/user","icon":"users-group","PageAction":15,"DisplayOrder":4},{"Username":"AP11","RoleName":"Admin","PageId":8,"ParentId":0,"PageName":"Page","DisplayName":"Page","URL":"/page","icon":"notebook","PageAction":15,"DisplayOrder":7},{"Username":"AP11","RoleName":"Admin","PageId":9,"ParentId":0,"PageName":"Role ","DisplayName":"Role ","URL":"/role","icon":"user-star","PageAction":15,"DisplayOrder":6},{"Username":"AP11","RoleName":"Admin","PageId":10,"ParentId":0,"PageName":"Currency","DisplayName":"Currency","URL":"/currency","icon":"users-group","PageAction":15,"DisplayOrder":5},{"Username":"AP11","RoleName":"Admin","PageId":11,"ParentId":0,"PageName":"Running Analysis","DisplayName":"Running Analysis","URL":"/runninganalysis","icon":"chart-bar","PageAction":15,"DisplayOrder":8},{"Username":"AP11","RoleName":"Admin","PageId":12,"ParentId":11,"PageName":"TP","DisplayName":"Teen Patti","URL":"/teenpatti","icon":"play-card","PageAction":1,"DisplayOrder":9},{"Username":"AP11","RoleName":"Admin","PageId":16,"ParentId":11,"PageName":"AB","DisplayName":"Andar Bahar","URL":"/andarbahar","icon":"play-card","PageAction":1,"DisplayOrder":13}]}'
+}
+[2023-10-25T05:41:23.371] [ERROR] default - { StatusCode: 1 }
+[2023-11-04T15:30:47.589] [ERROR] response - {
+  request: '{"content-type":"application/json","authorization":"Bearer eWTOkOFktSbS78SAYHoazvKevOW77c54fLS+UhFcb/7/Vgzmy44w6JinOZXqtX5z","user-agent":"PostmanRuntime/7.34.0","accept":"*/*","postman-token":"d69571f6-88f9-4db8-b627-7636fa7adf8f","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"59"}',
+  StatusCode: 8
+}
+[2023-11-04T15:31:21.435] [ERROR] response - {
+  request: '{"content-type":"application/json","authorization":"Bearer eWTOkOFktSbS78SAYHoazvKevOW77c54fLS+UhFcb/7/Vgzmy44w6JinOZXqtX5z","user-agent":"PostmanRuntime/7.34.0","accept":"*/*","postman-token":"53b72f28-2a36-4234-9d4d-32b81227e4fe","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"59"}',
+  StatusCode: 8
+}
+[2023-11-04T15:41:31.541] [ERROR] response - {
+  request: '{"content-type":"application/json","authorization":"Bearer ARUmHhm7zsUof9egzxYBVcvTDhWXZ9X8iRIwXI2pyw1S6tz9fMKHwDT3zv1bqtKD","user-agent":"PostmanRuntime/7.34.0","accept":"*/*","postman-token":"fd9f5ccc-3b5a-416a-850d-04b0afd1faf4","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"6"}',
+  StatusCode: 8
+}
+[2023-11-06T10:54:38.424] [ERROR] response - {
+  request: '{"content-type":"application/json","authorization":"Bearer IuCGVvIgjkSNHFSHB7K9X7Gm1kjA6biWUoXaHZ/oBv9hmWATZhhaxgWhdS+GdnoI","user-agent":"PostmanRuntime/7.34.0","accept":"*/*","postman-token":"8fda122a-5783-46c3-8e53-4189f99ef200","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"66"}',
+  StatusCode: 8
+}
+[2023-11-06T10:55:43.588] [ERROR] response - {
+  request: '{"content-type":"application/json","authorization":"Bearer IuCGVvIgjkSNHFSHB7K9X7Gm1kjA6biWUoXaHZ/oBv9hmWATZhhaxgWhdS+GdnoI","user-agent":"PostmanRuntime/7.34.0","accept":"*/*","postman-token":"be433dc2-7b57-413b-a5af-ce36c5c0e278","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"66"}',
+  StatusCode: 8
+}
+[2023-11-06T10:55:49.323] [ERROR] response - {
+  request: '{"content-type":"application/json","authorization":"Bearer IuCGVvIgjkSNHFSHB7K9X7Gm1kjA6biWUoXaHZ/oBv9hmWATZhhaxgWhdS+GdnoI","user-agent":"PostmanRuntime/7.34.0","accept":"*/*","postman-token":"6ed39571-d7e8-4062-88ea-b6576de55905","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"61"}',
+  StatusCode: 8
+}
+[2023-11-06T11:01:49.682] [ERROR] response - {
+  request: '{"content-type":"application/json","authorization":"Bearer IuCGVvIgjkSNHFSHB7K9X7Gm1kjA6biWUoXaHZ/oBv9hmWATZhhaxgWhdS+GdnoI","user-agent":"PostmanRuntime/7.34.0","accept":"*/*","postman-token":"dbb5bd87-ca86-4dbf-8574-c9f83bfa98ae","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"61"}',
+  StatusCode: 8
+}
+[2023-11-06T11:26:49.070] [ERROR] response - {
+  request: '{"content-type":"application/json","authorization":"Bearer eWTOkOFktSbS78SAYHoazvKevOW77c54fLS+UhFcb/7/Vgzmy44w6JinOZXqtX5z","user-agent":"PostmanRuntime/7.34.0","accept":"*/*","postman-token":"f3a2c053-6489-44a9-a650-d375c9b9772a","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"67"}',
+  StatusCode: 8
+}
+[2023-11-06T11:27:27.839] [ERROR] response - {
+  request: '{"content-type":"application/json","authorization":"Bearer eWTOkOFktSbS78SAYHoazvKevOW77c54fLS+UhFcb/7/Vgzmy44w6JinOZXqtX5z","user-agent":"PostmanRuntime/7.34.0","accept":"*/*","postman-token":"d40a9b8b-51e3-406c-b63d-bcc69f145f3d","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"64"}',
+  StatusCode: 8
+}
+[2023-11-07T09:34:38.317] [ERROR] response - {
+  request: '{"content-type":"application/json","authorization":"Bearer 1La5ANsnHNoDEcPvb5d1/Gwiyjb8ciKYqA/+VCslO/zZ6bNPfrhtUDAKQbhQ1o9B","user-agent":"PostmanRuntime/7.34.0","accept":"*/*","postman-token":"5525ec64-e335-4ce6-ac7a-42543a99e6b1","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"62"}',
+  StatusCode: 8
+}

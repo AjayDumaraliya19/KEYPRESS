@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile Page</title>
+  </head>
+  <body>
+    <!-- --------------------- Enter the Header file here ---------------------- -->
+    <%- include("comman/header") %>
+    <hr />
+
+    <div class="container">
+      <h1>My Profile</h1>
+
+      <table border="1">
+        <tr>
+          <th>Name:</th>
+          <td><%= user.name %></td>
+        </tr>
+        <tr>
+          <th>Email:</th>
+          <td><%= user.email %></td>
+        </tr>
+        <tr>
+          <th>Bio:</th>
+          <td><%= user.bio %></td>
+        </tr>
+      </table>
+    </div>
+
+    <hr />
+    <!-- --------------------- Enter the Footer file here ---------------------- -->
+    <%- include("comman/footer") %>
+  </body>
+</html>

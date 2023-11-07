@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+
+    <title>404 Page Not Found</title>
+
+    <!-- ---------------- External css file and JS file attach ----------------- -->
+    <link rel="stylesheet" href="../assets/css/PNF.css" />
+  </head>
+  <style>
+    .container {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    img {
+      max-width: 20%;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-top: 50px;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    a:hover {
+      color: blue;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <img src="https://static.vecteezy.com/system/resources/previews/012/576/665/non_2x/boy-sleeping-in-his-bed-cartoon-free-vector.jpg" alt="404 Page Not Found" />
+      <h1>404</h1>
+      <h2>PAGE NOT FOUND</h2>
+      <p>
+        The page you are looking for might have been removed, had its name
+        changed, or is temporarily unavailable.
+      </p>
+      <a href="/">Homepage</a>
+    </div>
+
+    <!-- ------------------- External JS file attach to here ------------------- -->
+    <script>
+      /** Add a simple animation to the 404 page */
+      const container = document.querySelector(".container");
+
+      /** Create a function to animate the text */
+      function animateText(textElement) {
+        /** Get the current text color */
+        const currentColor = textElement.style.color;
+
+        /** Set the text color to a random color */
+        textElement.style.color =
+          "#" + Math.floor(Math.random() * 16777215).toString(16);
+
+        /** Set a timeout to revert the text color to its original value */
+        setTimeout(() => {
+          textElement.style.color = currentColor;
+        }, 500);
+      }
+
+      /** Start animating the text in the container */
+      container.querySelectorAll("h1, h2, p, a").forEach((element) => {
+        animateText(element);
+      });
+
+      /** Keep animating the text every 1 second */
+      setInterval(() => {
+        container.querySelectorAll("h1, h2, p, a").forEach((element) => {
+          animateText(element);
+        });
+      }, 1000);
+    </script>
+  </body>
+</html>
