@@ -53,3 +53,13 @@
   request: '{"content-type":"application/json","authorization":"Bearer 1La5ANsnHNoDEcPvb5d1/Gwiyjb8ciKYqA/+VCslO/zZ6bNPfrhtUDAKQbhQ1o9B","user-agent":"PostmanRuntime/7.34.0","accept":"*/*","postman-token":"5525ec64-e335-4ce6-ac7a-42543a99e6b1","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"62"}',
   StatusCode: 8
 }
+[2023-11-08T11:41:05.824] [ERROR] response - {
+  request: '{"content-type":"application/json","authorization":"Bearer rUg7aTGW0pmvJ304nK5uwTDWex23a29fRvzyNsad0KN2gUUWqgcZHbA0Pk6v+35B","user-agent":"PostmanRuntime/7.34.0","accept":"*/*","postman-token":"189063e7-ec61-4402-8652-0513dd0b7329","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"65"}',
+  StatusCode: 8
+}
+[2023-11-08T14:34:04.066] [ERROR] response - {
+  request: '{"content-type":"application/json","authorization":"Bearer Do4F+fVwtHwDBcaZbfDsx+B2iztDAeAW2YcnUS55qyspe4Vrj72jqjKIxVSVnZL9","user-agent":"PostmanRuntime/7.34.0","accept":"*/*","postman-token":"a498f47d-d59d-4618-a1e2-effa568d4049","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"49"}',
+  StatusCode: 8
+}
+[2023-11-09T09:51:01.483] [ERROR] default - { StatusCode: 1 }
+[2023-11-09T09:58:17.220] [ERROR] default - { StatusCode: 1 }

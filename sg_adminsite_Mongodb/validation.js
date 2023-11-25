@@ -275,7 +275,7 @@ exports.GetPartnerSchema = Joi.object({
 
 /* -------------------- Get All player base on Partner Id ------------------- */
 exports.GetPlayerByPartnerId = Joi.object({
-  pid: Joi.number().integer().required(),
+  ptid: Joi.string().trim().required(),
   pi: Joi.number().integer().required(),
   ps: Joi.number().integer().required(),
   st: Joi.string().trim().allow(""),

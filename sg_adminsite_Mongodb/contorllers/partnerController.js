@@ -396,7 +396,7 @@ const GetAllPartner = async (req, res, next) => {
     res.status(200).send({
       StatusCode: 0,
       Data: spResult.data[0],
-      TotalCount: total_count.data[0].total_count,
+      TotalRecord: total_count.data[0].total_count,
     });
   } catch (error) {
     console.log("error", error);
@@ -411,7 +411,7 @@ const GetAllPartner = async (req, res, next) => {
 /* --------------------- Get all player using partner ID -------------------- */
 const getPlayerByPartnerId = async (req, res, next) => {
   let connection = await mysql.createPool(config);
-  const { pid, st, pi, ps } = req.body;
+  const { ptid, st, pi, ps } = req.body;
 
   try {
     let validData = await validate(req.body, GetPlayerByPartnerId);
@@ -423,7 +423,7 @@ const getPlayerByPartnerId = async (req, res, next) => {
     }
 
     let Rd = `CALL Casino_Dealer.admin_GetAllPlayer(?, ?, ?, ?, @total_count_out)`;
-    let spResult = await spCall(connection, Rd, [pid, st, pi, ps]);
+    let spResult = await spCall(connection, Rd, [ptid, st, pi, ps]);
 
     let total_count = await spCall(
       connection,
@@ -438,7 +438,7 @@ const getPlayerByPartnerId = async (req, res, next) => {
     res.status(200).send({
       StatusCode: 0,
       Data: spResult.data[0],
-      TotalCount: total_count.data[0].total_count,
+      TotalRecord: total_count.data[0].total_count,
     });
   } catch (error) {
     console.log("error", error);
