@@ -8,7 +8,17 @@ const addTransaction = async (connection, TransactionObj) => {
       "transactions",
       TransactionObj
     );
-    return addTransaction.data[0].insertId;
+    // return addTransaction.data[0].insertId;
+    if (
+      addTransaction &&
+      addTransaction.data &&
+      addTransaction.data.length > 0
+    ) {
+      return addTransaction.data[0].insertId;
+    } else {
+      console.error("No valid data returned for adding transaction");
+      return null; // or throw an error, depending on how you want to handle this case
+    }
   } catch (error) {
     console.error("Error adding transaction:", error);
     throw error;
@@ -119,7 +129,6 @@ const Credit = async (req, pdata) => {
     };
   }
 };
-
 
 const rollback = async (authorization, req, partnerData) => {
   try {

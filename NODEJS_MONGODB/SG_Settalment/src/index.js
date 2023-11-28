@@ -21,7 +21,7 @@ async function fetchDataFromMySQL(connection) {
 
   const data = [
     {
-      ri: 39960,
+      ri: 34522,
       Status: 3,
       winlist: [
         { gri: 1, rni: 2 },
@@ -312,15 +312,22 @@ async function updateplayer(
       timejson.rollbackres = new Date().toISOString();
     } else if (Creditres.StatusCode === -1) {
       TransactionObj.TransactionType = 3;
-      TransactionObj.status = 1;
+      TransactionObj.Status = 1;
 
       objrollbackTransaction = await addTransaction(connection, TransactionObj);
+
+      if (
+        Creditres.transaction === undefined ||
+        Creditres.transaction === null
+      ) {
+        Creditres.transaction = {};
+      }
 
       Creditres.transaction.referenceId = objrollbackTransaction.toString();
 
       timejson.objrollbackTransaction = new Date().toISOString();
 
-      Creditres.game.event = "cancel";
+      // Creditres.game.event = "cancel";
       rollbackres = await rollback(CreditReq, playerdata.pdata);
 
       timejson.rollbackres = new Date().toISOString();

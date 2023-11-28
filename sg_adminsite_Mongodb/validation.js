@@ -280,3 +280,20 @@ exports.GetPlayerByPartnerId = Joi.object({
   ps: Joi.number().integer().required(),
   st: Joi.string().trim().allow(""),
 });
+
+/* ------------------- Get logsData from MongoDB database ------------------- */
+exports.GetLogsdataSchema = {
+  query: Joi.object().keys(),
+  // body: Joi.object({
+  //   ri: Joi.number().integer().required(),
+  //   plid: Joi.number().integer().required(),
+  //   ptid: Joi.number().required(),
+  //   td: Joi.date().required(),
+  //   fd: Joi.date().required(),
+  // }),
+};
+
+const { Logsdata } = require("./models/logsdataModel");
+exports.getLogsList = async () => {
+  return Logsdata.find();
+};

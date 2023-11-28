@@ -1,4 +1,3 @@
-// const logger = require('../middlewares/logger');
 const { roleValidationSchema } = require("../validation");
 const validate = require("../middlewares/schemaValidation");
 const {

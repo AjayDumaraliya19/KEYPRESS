@@ -368,7 +368,7 @@ const listPartnerGameByPartnerId = async (req, res) => {
 
 /* ----------------------------- Get all partner ---------------------------- */
 const GetAllPartner = async (req, res, next) => {
-  let connection = await mysql.createPool(config);
+  let connection = mysql.createPool(config);
   const { st, pi, ps } = req.body;
 
   try {

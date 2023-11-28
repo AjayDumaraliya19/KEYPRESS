@@ -63,3 +63,29 @@
 }
 [2023-11-09T09:51:01.483] [ERROR] default - { StatusCode: 1 }
 [2023-11-09T09:58:17.220] [ERROR] default - { StatusCode: 1 }
+[2023-11-27T14:25:38.645] [ERROR] default - { StatusCode: 1 }
+[2023-11-27T14:26:09.094] [ERROR] default - { StatusCode: 1 }
+[2023-11-27T14:27:44.399] [ERROR] default - { StatusCode: 1 }
+[2023-11-27T14:30:17.428] [ERROR] default - { StatusCode: 1 }
+[2023-11-28T10:44:34.674] [ERROR] default - { StatusCode: 1 }
+[2023-11-28T10:45:47.476] [ERROR] default - { StatusCode: 1 }
+[2023-11-28T14:28:13.786] [ERROR] response - {
+  request: '{"content-type":"application/json","authorization":"Bearer +JxGZxPlzwm7ttVfcY6RCPDxGgHEr8D8cUkbvm83tHPwK8AkX2hLsdn6GK6hnrN+","user-agent":"PostmanRuntime/7.35.0","accept":"*/*","postman-token":"7ea89e10-f230-4abb-be66-e5ed0afa5759","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"64"}',
+  StatusCode: 8
+}
+[2023-11-28T14:30:05.306] [ERROR] response - {
+  request: '{"content-type":"application/json","authorization":"Bearer +JxGZxPlzwm7ttVfcY6RCPDxGgHEr8D8cUkbvm83tHPwK8AkX2hLsdn6GK6hnrN+","user-agent":"PostmanRuntime/7.35.0","accept":"*/*","postman-token":"800fbe74-652a-4d8e-8301-606a30616f0f","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"49"}',
+  StatusCode: 8
+}
+[2023-11-28T14:31:21.945] [ERROR] response - {
+  request: '{"content-type":"application/json","authorization":"Bearer +JxGZxPlzwm7ttVfcY6RCPDxGgHEr8D8cUkbvm83tHPwK8AkX2hLsdn6GK6hnrN+","user-agent":"PostmanRuntime/7.35.0","accept":"*/*","postman-token":"338bfab6-8722-47d2-a966-91c8ccc04676","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"49"}',
+  StatusCode: 8
+}
+[2023-11-28T15:47:34.901] [ERROR] response - {
+  request: '{"host":"localhost:7700","user-agent":"insomnia/2023.5.8","authorization":"Bearer eWTOkOFktSbS78SAYHoazvKevOW77c54fLS+UhFcb/7/Vgzmy44w6JinOZXqtX5z","accept":"*/*","content-length":"3"}',
+  StatusCode: 8
+}
+[2023-11-28T15:48:29.833] [ERROR] response - {
+  request: '{"authorization":"Bearer /7k0asaDI+56O+5GCdX2RofCTg7a9v7n/mD3MtgjA1bqmN+5LT6nv+2jQTKkJi2E","user-agent":"PostmanRuntime/7.35.0","accept":"*/*","postman-token":"268ddf43-364f-4aa6-bc49-d862acdf48dd","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive"}',
+  StatusCode: 8
+}
