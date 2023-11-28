@@ -4,14 +4,15 @@ const { mongoConfig } = require("../config/connection");
 /** Get all data from the MongoDB Database */
 const GetAllLogsData = async (req, res) => {
   try {
+    /** Connect on MongoDB Database */
     const client = await connectDB();
 
-    /** Database and Collection coneection */
+    /** Database and Collection connection */
     const db = client.db(mongoConfig.database);
-    const collection = client.collection("SG_data");
+    const collection = db.collection("SG_data");
 
     /** Perform operations on the collection */
-    const logsList = await client.find({}).toArray();
+    const logsList = await collection.find({}).toArray();
 
     console.log("Documents:", logsList);
 
