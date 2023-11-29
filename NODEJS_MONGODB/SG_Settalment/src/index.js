@@ -110,7 +110,7 @@ async function saveDataToMongoDB(client, data) {
 
   try {
     const db = client.db(config.mongodb.database_name);
-    const collection = db.collection(config.mongodb.collection_name);
+    const collection = db.collection("SG_data");
 
     await collection.insertMany(data);
     console.log("Data saved to MongoDB");

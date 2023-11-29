@@ -8,7 +8,6 @@ dotenv.config();
 const envVarsSchema = Joi.object({
   MONGODB_URL: Joi.string().trim().description("Mongodb url"),
   DATABASE_NAME: Joi.string().trim().description("MongoDB Database name"),
-  COLLECTION_NAME: Joi.string().description("MongoDB collection name"),
   DB_HOST: Joi.string().trim().description("SQL host!"),
   DB_PORT: Joi.number().default(3306).description("SQL port!"),
   DB_USER: Joi.string(),
@@ -34,7 +33,6 @@ if (error) {
 module.exports = {
   mongodb: {
     database_name: envVars.DATABASE_NAME,
-    collection_name: envVars.COLLECTION_NAME,
     url: envVars.MONGODB_URL,
     options: {
       useNewUrlParser: true,
