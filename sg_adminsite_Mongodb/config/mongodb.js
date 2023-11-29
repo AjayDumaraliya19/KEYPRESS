@@ -5,7 +5,6 @@ const { mongoConfig } = require("./connection");
 const connectDB = async () => {
   try {
     const client = await MongoClient.connect(mongoConfig.url);
-    console.log(client);
     console.log("MongoDB database connection successfully!");
 
     return client;

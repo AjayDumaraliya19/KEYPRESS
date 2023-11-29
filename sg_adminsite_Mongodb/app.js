@@ -5,9 +5,6 @@ const app = express();
 const PORT = process.env.PORT || 7700;
 const route = require("./routes/routes");
 const cors = require("cors");
-// const connectDB = require("./config/mongodb");
-
-// connectDB();
 
 app.get("/", (req, res) => {
   res.send("Api Working!");

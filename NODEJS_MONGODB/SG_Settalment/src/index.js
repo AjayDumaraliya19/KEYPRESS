@@ -21,7 +21,7 @@ async function fetchDataFromMySQL(connection) {
 
   const data = [
     {
-      ri: 34522,
+      ri: 12344,
       Status: 3,
       winlist: [
         { gri: 1, rni: 2 },
@@ -36,12 +36,12 @@ async function fetchDataFromMySQL(connection) {
             { pl: 8.2, tid: 4916, isWon: 1 },
             { pl: -8.6, tid: 4917, isWon: 0 },
           ],
-          pid: 7,
+          pid: 6,
           pdata: {
             Pldata: {
               cc: "AUD",
               pln: "Demo11",
-              plid: 7,
+              plid: 4,
               plst: "0443b80c-96b1-435b-a69c-fe30f796312e",
             },
             Ptdata: {
@@ -50,7 +50,7 @@ async function fetchDataFromMySQL(connection) {
               ra: "https://partnerapi.elexamover.com/rollback",
               ptn: "Demo",
               plsk: "7c601500-4a4d-4d19-a15e-3d4caa2e247a",
-              ptid: 1,
+              ptid:1,
             },
           },
           stype: 1,

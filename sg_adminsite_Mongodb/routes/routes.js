@@ -163,11 +163,7 @@ router.post("/report/gr", auth, GetRoundReport);
 router.post("/report/gdr", auth, GetRounDetailsdReport);
 
 //===============Logsdata Route ===============
-const {
-  GetAllLogsData,
-  GetLogsData,
-} = require("../contorllers/logsDataController");
-router.get("/logsdatalist", auth, GetAllLogsData);
+const { GetLogsData } = require("../contorllers/logsDataController");
 router.post("/logsdata", auth, GetLogsData);
 
 module.exports = router;

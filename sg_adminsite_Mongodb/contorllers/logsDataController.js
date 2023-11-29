@@ -1,31 +1,5 @@
-const connectDB = require("../config/mongodb");
 const { mongoConfig } = require("../config/connection");
-
-/** Get all data from the MongoDB Database */
-const GetAllLogsData = async (req, res) => {
-  try {
-    /** Connect on MongoDB Database */
-    const client = await connectDB();
-
-    /** Database and Collection connection */
-    const db = client.db(mongoConfig.database);
-    const collection = db.collection("SG_data");
-
-    /** Perform operations on the collection */
-    const logsList = await collection.find({}).toArray();
-
-    console.log("Documents:", logsList);
-
-    res.status(200).send({
-      StatusCode: 0,
-      Data: logsList,
-    });
-  } catch (error) {
-    res.status(401).send({
-      StatusCode: 1,
-    });
-  }
-};
+const connectDB = require("../config/mongodb");
 
 /** Get all data from the MongoDB Database */
 const GetLogsData = async (req, res) => {
@@ -33,14 +7,21 @@ const GetLogsData = async (req, res) => {
     const client = await connectDB();
     const { ri, pid, plid, ptid } = req.body;
 
+    /** Connect database and collection */
+    const db = client.db(mongoConfig.database);
+    const collection = db.collection("SG_data");
+
     /** Perform operations on the collection */
-    const logsList = await client
+    const logsList = await collection
       .find({
-        $and: [{ ri: ri }, { pid: pid }, { plid: plid }],
+        $and: [
+          { ri: ri },
+          { pid: pid },
+          { plid: plid },
+          { "req.data.Ptdata.ptid": ptid },
+        ],
       })
       .toArray();
-
-    console.log("logslist:", logsList);
 
     res.status(200).send({
       StatusCode: 0,
@@ -53,4 +34,4 @@ const GetLogsData = async (req, res) => {
   }
 };
 
-module.exports = { GetAllLogsData, GetLogsData };
+module.exports = { GetLogsData };
