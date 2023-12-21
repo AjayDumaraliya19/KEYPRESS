@@ -115,7 +115,7 @@ const deleteRole = async (req, res) => {
       return res.status(400).send({ StatusCode: 13 });
     }
     const deleting = await updateData(connection, "boroles", req.params, {
-      ModifiedBy: req.userData.userId,
+      ModifiedBy: req.userData.userId, // User Authentication throw get it.
       ModifiedOn: await wutc(),
       IsDelete: 1,
     });

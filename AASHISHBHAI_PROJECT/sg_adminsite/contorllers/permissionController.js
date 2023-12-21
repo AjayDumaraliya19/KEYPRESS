@@ -117,7 +117,7 @@ const updatePermission = async (req, res) => {
         error: validData,
       });
     }
-    req.body.ModifiedBy = req.userData.userId;
+    req.body.ModifiedBy = req.userData.userId; // Authentication throw the get the MidifiedBy Value
     req.body.ModifiedOn = await wutc();
     const updating = await updateData(
       connection,
@@ -169,7 +169,7 @@ const deletePemission = async (req, res, next) => {
 const listPermision = async (req, res) => {
   let connection = mysql.createPool(config);
   try {
-    const list = await joinQuery(connection, req.body.Limit, req.body.Page);
+    const list = await joinQuery(connection, req.body.Limit, req.body.Page); // Limit = pageSize and Page = pageIndex throw the Database query
     if (list.error) {
       return res.status(401).send({ StatusCode: 1 });
     }
