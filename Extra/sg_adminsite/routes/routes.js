@@ -9,14 +9,12 @@ const {
   listUser,
   deleteUser,
   updateUser,
-  updatePassword,
 } = require("../contorllers/userController");
 router.post("/userlist", auth, listUser);
 router.post("/user", auth, userCreate);
 router.post("/user/login", login);
 router.post("/user/update/:UserId", auth, updateUser);
 router.delete("/user/delete/:UserId", auth, deleteUser);
-router.post("/user/up", auth, updatePassword);
 
 //===============Role Route ===============
 const {
@@ -76,11 +74,10 @@ const {
   LastTenWinners,
   StartGame,
   Getallgame,
-  CancelRoundbygameCode,
 } = require("../contorllers/gameContoller");
 router.get("/getGame", auth, gameWithoutPagination);
 router.post("/gameDetailsByGameCode", auth, gameDetailsByGameCode);
-router.post("/gamelist", auth, gameList);
+router.post("/gamelist", gameList);
 router.post("/game", auth, insertGame);
 router.post("/game/update/:GameId", auth, updateGame);
 router.post("/game/updateDetails/:GameId", auth, updateGameDetails);
@@ -88,7 +85,6 @@ router.delete("/game/delete/:GameId", auth, deleteGame);
 router.post("/winners", auth, LastTenWinners);
 router.post("/game/sg/:GameId", auth, StartGame);
 router.get("/getallGame", auth, Getallgame);
-router.post("/cancelgame", auth, CancelRoundbygameCode);
 
 //===============Runner Route ===============
 const {
@@ -98,7 +94,7 @@ const {
   listRunnerByGameId,
   Getallrunner,
 } = require("../contorllers/runnerController");
-router.get("/runnerByGameId/:GameId", auth, listRunnerByGameId);
+router.get("/runnerByGameId/:GameId", listRunnerByGameId);
 router.post("/runner", auth, insertRunner);
 router.post("/runner/update/:RunnerId", auth, updateRunner);
 router.delete("/runner/delete/:RunnerId", auth, deleteRunner);
@@ -133,8 +129,16 @@ router.post("/partner/update/:PartnerId", auth, updatePartner);
 router.delete("/partner/delete/:PartnerId", auth, deletePartner);
 router.post("/listPartnerGameByPartnerId", auth, listPartnerGameByPartnerId);
 router.post("/partnerGameMap", auth, insertPartnerGame);
-router.post("/partnerGameMap/update/:PartnerGameMapId", auth, updatePartnerGame );
-router.delete("/partnerGameMap/delete/:PartnerGameMapId", auth, deletePartnerGame);
+router.post(
+  "/partnerGameMap/update/:PartnerGameMapId",
+  auth,
+  updatePartnerGame
+);
+router.delete(
+  "/partnerGameMap/delete/:PartnerGameMapId",
+  auth,
+  deletePartnerGame
+);
 
 //===============Round Route ===============
 const {
@@ -150,24 +154,8 @@ router.post("/ti", auth, ticketInfoByTicketId);
 const {
   GetRoundReport,
   GetRounDetailsdReport,
-  GetPartnerPL,
-  GetTablePL,
-  GetPlayerPL,
-  GetGamePL,
-  GetTicketReport,
-  GetAllPartnerwithsearch,
-  getPlayerByPartnerId,
 } = require("../contorllers/ReportController");
 router.post("/report/gr", auth, GetRoundReport);
 router.post("/report/gdr", auth, GetRounDetailsdReport);
-router.post("/report/PartnerPL", auth, GetPartnerPL);
-router.post("/report/TablePL", auth, GetTablePL);
-router.post("/report/PlayerPL", auth, GetPlayerPL);
-router.post("/report/GamePL", auth, GetGamePL);
-router.post("/report/TicketReport", auth, GetTicketReport);
-
-//===============Report Dropdown Route ===============
-router.post("/allpt", auth, GetAllPartnerwithsearch);
-router.post("/allply", auth, getPlayerByPartnerId);
 
 module.exports = router;

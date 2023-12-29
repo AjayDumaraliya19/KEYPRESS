@@ -1,0 +1,453 @@
+When casino game in casrd scan that time get this card and what is process do to create a below requirement base object.
+I have already create tables game table, gameDeatils table, Round table, runner table, rounddetails table.
+game table keys (GameId, Name, Code, game_type, Image, DisplayOrder, Status, IsActive, IsDelete, CreatedBy, reatedOn, ModifiedBy, ModifiedOn, ConsolePassword, is_auto),
+gameDeatils table keys (GameDetailId, GameId, Description, Rules, StreamUrl, HowToPlayUrl, IsExposure, IsSound, GameSec, CardSec, Theme) here GameId referance from game table,
+round table keys (RoundId, GameId, Status, IsSettled, Result, SideResult, IsActive, IsDelete, CreatedBy, CreatedOn, ModifiedBy, ModifiedOn) here GameId referance from game table,
+Runner table keys (RunnerId, GameId, SideRoundId, Name, Rcode, ExternalKey, BackOdd, LayOdd, Cards, Score, GroupId, Status, IsActive, IsDelete, CreatedBy, CreatedOn, ModifiedBy, ModifiedOn, IsShow) here GameId referance from game table,
+RoundDetails table keys (RoundDetailId, RoundId, Status, CurrentScannedCard, Card, Odds, Score, IsActive, IsDelete, CreatedBy, CreatedOn) here RoundId referance from game table,
+
+[
+  "roundUpdate",
+  {
+    ri: 45147,
+    gc: "TP",
+    cn: { cc: { rni: null, cr: null }, nc: { rni: 1 } },
+    crs: [
+      { rni: 1, cr: "", sc: "", ek: "" },
+      { rni: 2, cr: "", sc: "", ek: "" },
+    ],
+    od: [
+      { rni: 1, bk: 1.98, ly: 2.05, st: 1 },
+      { rni: 2, bk: 1.98, ly: 2.05, st: 1 },
+      { rni: 3, bk: 2, ly: 0, st: 1 },
+      { rni: 4, bk: 5, ly: 0, st: 1 },
+      { rni: 5, bk: 7, ly: 0, st: 1 },
+      { rni: 6, bk: 36, ly: 0, st: 1 },
+      { rni: 7, bk: 46, ly: 0, st: 1 },
+      { rni: 54, bk: 1.98, ly: 2.05, st: 1 },
+      { rni: 67, bk: 0, ly: 0, st: 1 },
+    ],
+    rs: null,
+    sr: {
+      rni: [],
+    },
+    st: 1,
+    iro: false,
+    trs: 25,
+    et: "RoundCreate",
+    ts: 1703661012744,
+  },
+];
+here ri=roundId, gc=gameCode, rni=runnerId, cr=currentCard, sc=secondCard, ek=ExternalKey, crs=Cards, od=Odds, bk=backOdd, ly=layOdd, st=status, rs=result, sr=sideResult, iro=IsroundOver, trs=cardSec, ts=timeStamp
+
+
+when Scan card and store card values in variable. check card using middleware if card are available in database if not than create a round in round table and store in database than after use scancard variable throgh call the rate api for the get all rates for all card like backOdd and layOdd match card and get that match value rates store in database and create a object 
+
+when card scan and store in the variable and than create round store in round table in database. here round table in flied like roundid, gameid from game table which get from start current gameId, status=3, IsSettled=1, result=null , sideResult='{"ri":[]}', IsActive=1, Isdelete=0, CreatedBy=1, CreatedOn=UTC_timeStamp(),ModifiedBy=null, ModifiedOn=null.
+
+
+1, 1, 'ap11', 6, '3c23cf58-3cfa-47d7-8054-6604c2fb4314', now(), 'ap11', 'https://partnerurl.com', '
+2, 1, 'Av11', 6, '5b8b96f1-b00b-47a8-b298-d4819acb74c4', now(), 'Av11', 'https://partnerurl.com', '
+3, 1, 'ar11', 6, '38feaa30-cd96-4302-ad54-b26a51775031', now(), 'ar11', 'https://partnerurl.com', '
+4, 1, 'a1a31a', 4, '787337f8-6d65-440f-8041-3e9970df82ed', now(), 'np11345', 'https://partnerurl.com', '
+5, 1, 'VK11', 6, '5524f7a2-c98d-418b-8242-21aa2f008e27', now(), 'VK11', 'https://partnerurl.com', '
+6, 1, 'A11', 6, '37ff028f-7bd1-4bfc-b964-8731267d200f', now(), 'A11', 'https://partnerurl.com', '
+7, 1, 'Demo11', 6, '05ae0787-1d67-4632-a1c8-95e2ca0e8f09', now(), 'Demo11', 'https://partnerurl.com', '
+8, 1, 'Test11', 6, '26f36f25-bdd1-46ff-9e4a-b876691a8094', now(), 'Test11', 'https://partnerurl.com', '
+9, 1, 'TP11', 6, '176d2f9f-5750-4c06-9f0b-4b7d03655f1d', now(), 'np11345', 'https://partnerurl.com', '
+10, 1, 'nd11', 6, 'ba864cc8-1db5-497b-982e-2b0dbc2b4dae', now(), 'nd11', 'https://partnerurl.com', '
+11, 1, 'dqwdqwd', 6, 'da6264cc-088b-45da-a16a-ed2819f99961', now(), 'dqwdqwd', 'https://partnerurl.com', '
+12, 1, 'vl11', 6, '55c6b1e5-5c0d-4c2a-bd44-a1d9148b0ce8', now(), 'np11345', 'https://partnerurl.com', '
+13, 1, 'vl11', 6, 'c418fd86-a104-498c-baeb-45d8ad0f6ea1', now(), 'np11345', 'https://partnerurl.com', ' 
+14, 1, 'a1a2a3a4', 4, '9f08b3a8-3254-4999-8c91-3f700f02139f', now(), 'np11', 'https://partnerurl.com', ' 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+ 
+
+ 
+https://alphatest.satsport247.com/manual-deposit
+https://alphatest.satsport247.com/manual-deposit
+
+ 
+15, 14, 'Demo1234', 4, 'd2d9c0c7-cb0b-4690-a89b-122fb85dae25', now(), 'Demo1', 'https://partnerurl.com', ' 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+ 
+
+ 
+https://alphatest.satsport247.com/manual-deposit
+https://alphatest.satsport247.com/manual-deposit
+
+ 
+16, 1, 'TP', 6, '2e686451-e150-4df0-8ce0-a19dbb9b578d', now(), 'TP', 'https://partnerurl.com', ' 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+ 
+
+ 
+https://alphatest.satsport247.com/manual-deposit
+https://alphatest.satsport247.com/manual-deposit
+
+ 
+17, 1, 'Demo111', 6, '70147cd5-a199-4cb8-9e67-4f1cfd19274a', now(), 'Demo111', 'https://partnerurl.com', ' 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+ 
+
+ 
+https://alphatest.satsport247.com/manual-deposit
+https://alphatest.satsport247.com/manual-deposit
+
+ 
+18, 13, 'nk11', 4, 'd9bc8ccb-5c55-4e96-9f01-8cd62c1206fe', now(), 'nk11', 'https://alphatest.satsport247.com', ' 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+ 
+
+ 
+https://alphatest.satsport247.com/manual-deposit
+https://alphatest.satsport247.com/manual-deposit
+
+ 
+19, 1, 'ap11', 6, '3c23cf58-3cfa-47d7-8054-6604c2fb4314', now(), 'ap11', 'https://partnerurl.com', ' 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+ 
+
+ 
+https://alphatest.satsport247.com/manual-deposit
+https://alphatest.satsport247.com/manual-deposit
+
+ 
+20, 13, 'AK71', 4, 'f815b4c9-4f93-4453-8004-9ada0561829b', now(), 'AK71', 'https://alphatest.satsport247.com', ' 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+ 
+
+ 
+https://alphatest.satsport247.com/manual-deposit
+https://alphatest.satsport247.com/manual-deposit
+
+ 
+21, 1, 'ap11', 6, '3c23cf58-3cfa-47d7-8054-6604c2fb4314', now(), 'ap11', 'https://partnerurl.com', ' 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+ 
+
+ 
+https://alphatest.satsport247.com/manual-deposit
+https://alphatest.satsport247.com/manual-deposit
+
+ 
+22, 1, 'SM11', 6, 'cc4a0f51-7607-40d4-bdbc-1d9e8ab924ec', now(), 'SM11', 'https://partnerurl.com', ' 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+ 
+
+ 
+https://alphatest.satsport247.com/manual-deposit
+https://alphatest.satsport247.com/manual-deposit
+
+ 
+23, 14, '85CP25692', 4, 'f52fa9fe-05e9-4dd0-a9cd-a3d5a3b47d5b', now(), '85CP25692', 'http://devb2bdemo.bollytech.com/?js=close', ' 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+ 
+
+ 
+https://alphatest.satsport247.com/manual-deposit
+https://alphatest.satsport247.com/manual-deposit
+
+ 
+24, 1, '25692', 4, '4565e799-ece3-4766-9f56-118a159a524d', now(), '85CP25692', 'https://partnerurl.com', ' 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+ 
+
+ 
+https://alphatest.satsport247.com/manual-deposit
+https://alphatest.satsport247.com/manual-deposit
+
+ 
+25, 13, 'bh11', 4, '8d318454-fc4a-485a-b145-6c8bd8502f89', now(), 'bh11', 'https://alphatest.satsport247.com', ' 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+ 
+
+ 
+https://alphatest.satsport247.com/manual-deposit
+https://alphatest.satsport247.com/manual-deposit
+
+ 
+26, 13, 'At11', 4, 'd5450c12-14a1-4773-ac74-2f58f6820fc9', now(), 'At11', 'https://alphatest.satsport247.com', ' 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+ 
+
+ 
+https://alphatest.satsport247.com/manual-deposit
+https://alphatest.satsport247.com/manual-deposit
+
+ 
+27, 14, '85CP25692', 4, 'f52fa9fe-05e9-4dd0-a9cd-a3d5a3b47d5b', now(), '85CP25692', 'http://devb2bdemo.bollytech.com/?js=close', ' 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+https://alphatest.satsport247.com/manual-deposit
+ 
+ 
+
+ 
+https://alphatest.satsport247.com/manual-deposit
+https://alphatest.satsport247.com/manual-deposit
+
+ 

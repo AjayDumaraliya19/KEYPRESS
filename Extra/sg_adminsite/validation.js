@@ -1,6 +1,5 @@
 const Joi = require("joi");
 
-/* --------------- Date schema for create a UTC date structure -------------- */
 const dateSchema = Joi.string().custom((value, helpers) => {
   const utcDatePattern = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -17,7 +16,6 @@ const dateSchema = Joi.string().custom((value, helpers) => {
   return value;
 }, "UTC Date Validation");
 
-/* ---------------------- User Insert validation schema --------------------- */
 exports.usersInsertValidationSchema = Joi.object().keys({
   Username: Joi.string()
     .min(3)
@@ -28,14 +26,12 @@ exports.usersInsertValidationSchema = Joi.object().keys({
   RoleId: Joi.number().error(new Error("add user RoleId")).required(),
 });
 
-/* ---------------------- User Update validation schema --------------------- */
 exports.usersUpdateValidationSchema = Joi.object().keys({
   Username: Joi.string(),
   RoleId: Joi.number(),
   IsActive: Joi.number(),
 });
 
-/* ------------------------- User validation Schema ------------------------- */
 exports.usersValidationSchema = Joi.object().keys({
   Username: Joi.string()
     .min(3)
@@ -48,7 +44,6 @@ exports.usersValidationSchema = Joi.object().keys({
     .required(),
 });
 
-/* --------------------- Game details Validation schema --------------------- */
 exports.gameAndGameDetailsValidationSchema = Joi.object().keys({
   Name: Joi.string().error(new Error("add your Game Name")).required(),
   Code: Joi.string().error(new Error("add your Code")).required(),
@@ -68,7 +63,6 @@ exports.gameAndGameDetailsValidationSchema = Joi.object().keys({
   Theme: Joi.string().allow(null).optional(),
 });
 
-/* ------------------ Game Detials update Valisation schema ----------------- */
 exports.gameAndGameDetailsUpdateValidationSchema = Joi.object().keys({
   Name: Joi.string(),
   Code: Joi.string(),
@@ -87,7 +81,6 @@ exports.gameAndGameDetailsUpdateValidationSchema = Joi.object().keys({
   Theme: Joi.string().empty("").allow(null).optional(),
 });
 
-/* ------------------------ Runner Validation Schema ------------------------ */
 exports.runnerValidationSchema = Joi.object().keys({
   GameId: Joi.number().error(new Error("add your GameId")).required(),
   Name: Joi.string().error(new Error("add your Runner Name")).required(),
@@ -97,7 +90,6 @@ exports.runnerValidationSchema = Joi.object().keys({
   Rcode: Joi.string().error(new Error("add your Rcode")).required(),
 });
 
-/* --------------------- Runner Update Validation Schema -------------------- */
 exports.runnerUpdateValidationSchema = Joi.object().keys({
   Name: Joi.string(),
   BackOdd: Joi.number(),
@@ -107,13 +99,11 @@ exports.runnerUpdateValidationSchema = Joi.object().keys({
   Rcode: Joi.string(),
 });
 
-/* ------------------------- Role Validation Schema ------------------------- */
 exports.roleValidationSchema = Joi.object().keys({
   Name: Joi.string().error(new Error("add your Role Name")).required(),
   IsActive: Joi.number(),
 });
 
-/* ------------------------- Page Validation Schema ------------------------- */
 exports.pageValidationSchema = Joi.object().keys({
   Name: Joi.string().error(new Error("add Page Name")).required(),
   ParentId: Joi.number(),
@@ -126,7 +116,6 @@ exports.pageValidationSchema = Joi.object().keys({
   Role: Joi.number().error(new Error("add Page ROle")).required(),
 });
 
-/* ------------------------- Page Validation Schema ------------------------- */
 exports.pageUpdateValidationSchema = Joi.object().keys({
   Name: Joi.string(),
   ParentId: Joi.number(),
@@ -138,14 +127,12 @@ exports.pageUpdateValidationSchema = Joi.object().keys({
   Role: Joi.number(),
 });
 
-/* ---------------------- Permission Validation schema ---------------------- */
 exports.permissionValidationSchema = Joi.object().keys({
   RoleId: Joi.number().error(new Error("add RoleId")).required(),
   PageId: Joi.number().error(new Error("add PageId")).required(),
   Action: Joi.number().error(new Error("add Action")).required(),
 });
 
-/* ------------------- Udpate permission Validation Schema ------------------ */
 exports.permissionUpdateValidationSchema = Joi.object().keys({
   RoleId: Joi.number(),
   PageId: Joi.number(),
@@ -153,20 +140,17 @@ exports.permissionUpdateValidationSchema = Joi.object().keys({
   IsActive: Joi.number(),
 });
 
-/* ----------------------- Currency Validation schema ----------------------- */
 exports.currencyValidationSchema = Joi.object().keys({
   Name: Joi.string().error(new Error("add Currency Name")).required(),
   Code: Joi.string().error(new Error("add Currency Code")).required(),
 });
 
-/* -------------------- Currency Udpate validation Schema ------------------- */
 exports.currencyUpdateValidationSchema = Joi.object().keys({
   Name: Joi.string(),
   Code: Joi.string(),
   IsActive: Joi.number(),
 });
 
-/* ------------------------ Partner Validation Schema ----------------------- */
 exports.partnerValidationSchema = Joi.object().keys({
   Name: Joi.string().max(15).error(new Error("add Name")).required(),
   WebsiteUrl: Joi.string()
@@ -192,7 +176,6 @@ exports.partnerValidationSchema = Joi.object().keys({
     .required(),
 });
 
-/* -------------------- Partner Update Validation schema -------------------- */
 exports.partnerUpdateValidationSchema = Joi.object().keys({
   Name: Joi.string(),
   WebsiteUrl: Joi.string(),
@@ -208,7 +191,6 @@ exports.partnerUpdateValidationSchema = Joi.object().keys({
   SettlementType: Joi.number(),
 });
 
-/* ------------------- Partner game Map validation Schema ------------------- */
 exports.partnergamemapValidationSchema = Joi.object().keys({
   PartnerId: Joi.number().error(new Error("add PartnerId")).required(),
   GameId: Joi.array().error(new Error("add GameId")).required(),
@@ -218,7 +200,6 @@ exports.partnergamemapValidationSchema = Joi.object().keys({
   DelaySec: Joi.number().error(new Error("add DelaySec")).required(),
 });
 
-/* ------------------ Partner Game Updae validation schema ------------------ */
 exports.partnergamemapUpdateValidationSchema = Joi.object().keys({
   PartnerId: Joi.number(),
   GameId: Joi.array(),
@@ -229,27 +210,22 @@ exports.partnergamemapUpdateValidationSchema = Joi.object().keys({
   IsActive: Joi.number(),
 });
 
-/* --------------------------- Game Details Schema -------------------------- */
 exports.GameDetailsSchema = Joi.object({
   Code: Joi.string().required(),
 });
 
-/* -------------------------- Round Details Schema -------------------------- */
 exports.roundDetailsSchema = Joi.object({
   Code: Joi.string().required(),
 });
 
-/* -------------------------- Ticket Details Schema ------------------------- */
 exports.TicketDetailsSchema = Joi.object({
   ri: Joi.number().required(),
 });
 
-/* --------------------------- Ticket Data Schema --------------------------- */
 exports.TicketDataSchema = Joi.object({
   tid: Joi.number().required(),
 });
 
-/* ------------------------- Get Round Report Schema ------------------------ */
 exports.GetRoundReportSchema = Joi.object({
   ri: Joi.number().allow(null).optional(),
   gc: Joi.string().allow(null).optional(),
@@ -261,39 +237,6 @@ exports.GetRoundReportSchema = Joi.object({
   sd: Joi.string().required(),
 });
 
-/* --------------------- Get Round Details Report Schema -------------------- */
 exports.GetRounDetailsdReportSchema = Joi.object({
   ri: Joi.number().required(),
 });
-
-/* ----------------------- Get all Partner Validation ----------------------- */
-exports.GetPartnerSchema = Joi.object({
-  pi: Joi.number().integer().required(),
-  ps: Joi.number().integer().required(),
-  st: Joi.string().trim().allow(""),
-});
-
-/* -------------------- Get All player base on Partner Id ------------------- */
-exports.GetPlayerByPartnerId = Joi.object({
-  ptid: Joi.string().trim().required(),
-  pi: Joi.number().integer().required(),
-  ps: Joi.number().integer().required(),
-  st: Joi.string().trim().allow(""),
-});
-
-/* ------------------- Get logsData from MongoDB database ------------------- */
-exports.GetLogsdataSchema = {
-  query: Joi.object().keys(),
-  // body: Joi.object({
-  //   ri: Joi.number().integer().required(),
-  //   plid: Joi.number().integer().required(),
-  //   ptid: Joi.number().required(),
-  //   td: Joi.date().required(),
-  //   fd: Joi.date().required(),
-  // }),
-};
-
-// const { Logsdata } = require("./models/logsdataModel");
-// exports.getLogsList = async () => {
-//   return Logsdata.find();
-// };

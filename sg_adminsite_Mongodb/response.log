@@ -89,3 +89,195 @@
   request: '{"authorization":"Bearer /7k0asaDI+56O+5GCdX2RofCTg7a9v7n/mD3MtgjA1bqmN+5LT6nv+2jQTKkJi2E","user-agent":"PostmanRuntime/7.35.0","accept":"*/*","postman-token":"268ddf43-364f-4aa6-bc49-d862acdf48dd","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive"}',
   StatusCode: 8
 }
+[2023-12-29T11:39:47.608] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:47:44.162] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:47:50.290] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:47:55.646] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:47:56.811] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:48:09.749] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:48:11.050] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:48:14.196] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:48:18.814] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:48:21.385] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:48:26.097] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:48:29.462] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:49:16.063] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:49:21.583] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:49:38.221] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:49:43.153] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:49:50.372] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:49:54.677] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:49:56.075] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:50:59.606] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:50:59.607] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T11:51:53.158] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:51:58.182] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:51:58.183] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T11:52:28.083] [ERROR] default - {
+  StatusCode: 1,
+  message: "Cannot read properties of undefined (reading 'host')"
+}
+[2023-12-29T11:52:44.687] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T11:53:49.543] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T11:55:02.477] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T11:56:41.615] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T11:57:23.877] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T11:57:52.618] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T11:58:16.378] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T11:58:57.148] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T11:59:42.199] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T12:01:13.078] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T12:01:31.646] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T12:01:39.208] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T12:02:21.613] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T12:05:13.639] [ERROR] default - {
+  request: '{"content-type":"application/json","authorization":"Bearer eWTOkOFktSbS78SAYHoazvKevOW77c54fLS+UhFcb/7/Vgzmy44w6JinOZXqtX5z","user-agent":"PostmanRuntime/7.36.0","accept":"*/*","postman-token":"ce3cef28-95b7-4c49-9729-b6f7b507c4e5","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"58"}',
+  message: { value: { Username: 'AJ11', Password: 'AJ11@1234' } }
+}
+[2023-12-29T12:05:24.687] [ERROR] default - {
+  request: '{"content-type":"application/json","authorization":"Bearer eWTOkOFktSbS78SAYHoazvKevOW77c54fLS+UhFcb/7/Vgzmy44w6JinOZXqtX5z","user-agent":"PostmanRuntime/7.36.0","accept":"*/*","postman-token":"cfc3bac7-0cac-47f3-8a0c-7bb485be47dd","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"58"}',
+  message: { value: { Username: 'AJ11', Password: 'AJ11@1234' } }
+}
+[2023-12-29T12:05:48.358] [ERROR] default - {
+  request: '{"content-type":"application/json","user-agent":"PostmanRuntime/7.36.0","accept":"*/*","postman-token":"99b01f77-59d3-4042-b627-a8511c0190cc","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"58"}',
+  message: { value: { Username: 'AJ11', Password: 'AJ11@1234' } }
+}
+[2023-12-29T12:06:44.767] [ERROR] default - {
+  request: '{"content-type":"application/json","user-agent":"PostmanRuntime/7.36.0","accept":"*/*","postman-token":"3ed89ffa-fdde-4726-9b9f-1b31c1b64495","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"58"}',
+  message: { value: { Username: 'AJ11', Password: 'AJ11@1234' } }
+}
+[2023-12-29T12:56:23.986] [ERROR] default - {
+  request: '{"content-type":"application/json","authorization":"Bearer JASzjyKM/ppUTA+W1wIeQ7JZyDawhLQww473SpMtxMHrxgLUT1GQtKcfh8zLYv5+","user-agent":"PostmanRuntime/7.36.0","accept":"*/*","postman-token":"fc1d7131-2c88-472b-b458-639aa4a961a2","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"55"}',
+  message: [
+    {
+      _id: new ObjectId('65685e36c23db80879773287'),
+      RoundID: 112049,
+      PartnerId: 13,
+      PlayerId: 1,
+      RoundStatus: 3,
+      CreditTran: [Object],
+      CreditReq: [Object],
+      CreditRes: [Object],
+      RollbackTran: [Object],
+      UpdateTran: [Object]
+    }
+  ]
+}
+[2023-12-29T12:56:32.820] [ERROR] default - {
+  request: '{"content-type":"application/json","authorization":"Bearer JASzjyKM/ppUTA+W1wIeQ7JZyDawhLQww473SpMtxMHrxgLUT1GQtKcfh8zLYv5+","user-agent":"PostmanRuntime/7.36.0","accept":"*/*","postman-token":"0678c7a1-19c2-47a5-9cef-294827011962","host":"localhost:7700","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"55"}',
+  message: [
+    {
+      _id: new ObjectId('65685e36c23db80879773287'),
+      RoundID: 112049,
+      PartnerId: 13,
+      PlayerId: 1,
+      RoundStatus: 3,
+      CreditTran: [Object],
+      CreditReq: [Object],
+      CreditRes: [Object],
+      RollbackTran: [Object],
+      UpdateTran: [Object]
+    }
+  ]
+}
+[2023-12-29T13:00:54.996] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T13:01:00.535] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T13:07:51.752] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T13:11:07.309] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T13:11:15.500] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T13:51:54.365] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T13:52:53.317] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T14:01:17.092] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T14:01:46.027] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T14:02:47.293] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T14:03:04.756] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T14:04:04.594] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T14:08:34.857] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T14:10:22.932] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T14:11:33.367] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T14:11:44.815] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T14:12:14.949] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T14:17:05.923] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T14:20:35.847] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T14:26:22.646] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T14:28:28.455] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T14:44:04.320] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T14:45:17.884] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T15:55:07.533] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T16:09:05.087] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T16:11:05.710] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T16:18:21.983] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T16:19:32.542] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T16:19:51.753] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T16:20:09.247] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T16:20:48.709] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T16:21:07.913] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T16:21:28.148] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T16:33:23.066] [ERROR] default - { StatusCode: 1 }
+[2023-12-29T16:34:05.335] [ERROR] default - { StatusCode: 1 }

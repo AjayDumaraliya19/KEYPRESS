@@ -1,0 +1,14 @@
+# -------------------------------- ERROR code: ------------------------------- #
+
+{ StatusCode: 0, ErrorCode: 'EC000', Massage: 'Sucessfully Run', StatusType: StatusType.success },
+{ StatusCode: 1, ErrorCode: 'EC001', Massage: 'Something went wrong', StatusType: StatusType.error },
+{ StatusCode: 2, ErrorCode: 'EC002', Massage: 'Auth failed', StatusType: StatusType.error },
+{ StatusCode: 3, ErrorCode: 'EC003', Massage: 'Login successfully', StatusType: StatusType.success },
+{ StatusCode: 4, ErrorCode: 'EC004', Massage: 'Invalid credential', StatusType: StatusType.warning },
+{ StatusCode: 5, ErrorCode: 'EC005', Massage: 'Data added successfully', StatusType: StatusType.success },
+{ StatusCode: 6, ErrorCode: 'EC006', Massage: 'Data updated successfully', StatusType: StatusType.success },
+{ StatusCode: 7, ErrorCode: 'EC007', Massage: 'Data deleted successfully', StatusType: StatusType.success },
+{ StatusCode: 8, ErrorCode: 'EC008', Massage: 'Invalid token', StatusType: StatusType.warning },
+{ StatusCode: 9, ErrorCode: 'EC009', Massage: 'Already exists', StatusType: StatusType.warning },
+{ StatusCode: 10, ErrorCode: 'EC010', Massage: 'Role not available', StatusType: StatusType.warning }
+{ StatusCode: 11, ErrorCode: 'EC011', Massage: 'ENV config error', Statustype: Statustype.error }

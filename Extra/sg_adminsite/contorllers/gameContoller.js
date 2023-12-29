@@ -1,9 +1,4 @@
 const mysql = require("mysql2/promise");
-const axios = require("axios");
-const io = require("socket.io-client");
-const socket = io(process.env.hu, {
-  transports: ["websocket"],
-});
 const { config } = require("../config/connection");
 const logger = require("../middlewares/logger");
 const {
@@ -11,8 +6,6 @@ const {
   gameAndGameDetailsUpdateValidationSchema,
   GameDetailsSchema,
   TicketDetailsSchema,
-  CancelRoundSchema,
-  CancelRoundbygameCodeSchema,
 } = require("../validation");
 const validate = require("../middlewares/schemaValidation");
 const {
@@ -41,11 +34,6 @@ const tb7 = "currency";
 const tb8 = "gamedetail";
 const tb9 = "ticket";
 const tb10 = "playeractivity";
-
-socket.on("connect", () => {
-  // console.log('Connected to Socket.IO server');
-  // Send a message to the server
-});
 
 const insertGame = async (req, res) => {
   let connection;
@@ -137,8 +125,7 @@ const updateGame = async (req, res) => {
     const checkData = await getDataByField(
       connection,
       tableName,
-      `GameId = '${req.params.GameId}' and IsDelete = 0`,
-      "Code"
+      `GameId = '${req.params.GameId}' and IsDelete = 0`
     );
     if (checkData.data[0].length == 0) {
       return res.status(400).send({
@@ -174,18 +161,10 @@ const updateGame = async (req, res) => {
         StatusCode: 1,
       });
     }
-    if (req.body.hasOwnProperty("Status")) {
-      socket.emit("sendGameStatus", {
-        gc: checkData.data[0][0].Code,
-        st: req.body.Status,
-      });
-    }
-
     res.status(200).send({
       StatusCode: 6,
     });
   } catch (error) {
-    console.log(error);
     logger.error({
       StatusCode: 1,
     });
@@ -257,7 +236,7 @@ const deleteGame = async (req, res, next) => {
     const checkData = await getDataByField(
       connection,
       tableName,
-      `GameId = '${req.params.GameId}' and IsDelete = 0`
+      `GameId = '${req.params.GameId}' and IsActive = 1 and IsDelete = 0`
     );
     if (checkData.data[0].length == 0) {
       return res.status(400).send({
@@ -525,89 +504,6 @@ const Getallgame = async (req, res, next) => {
   }
 };
 
-const CancelRound = async (req, res, next) => {
-  let connection = mysql.createPool(config);
-  try {
-    let validData = await validate(req.body, CancelRoundSchema);
-    if (validData !== undefined) {
-      return res.status(400).send({
-        StatusCode: 15,
-        error: validData,
-      });
-    }
-
-    let SG = `CALL Casino_Dealer.admin_CancelRound("${req.body.ri}","${req.userData.userId}");`;
-    let spResult = await spCall(connection, SG);
-    if (spResult.error != null) {
-      return res.status(401).send({
-        StatusCode: 4,
-      });
-    }
-    console.log(JSON.stringify(spResult.data));
-    res.status(200).json({
-      StatusCode: 0,
-      Data: spResult.data.Data[0],
-    });
-  } catch (error) {
-    console.log("error", error);
-    res.status(401).send({
-      StatusCode: 1,
-    });
-  } finally {
-    connection.end();
-  }
-};
-
-const CancelRoundbygameCode = async (req, res, next) => {
-  let connection = mysql.createPool(config);
-  try {
-    let validData = await validate(req.body, CancelRoundbygameCodeSchema);
-    if (validData !== undefined) {
-      return res.status(400).send({
-        StatusCode: 15,
-        error: validData,
-      });
-    }
-
-    const postData = {
-      game_code: req.body.gc,
-      user_id: req.userData.userId,
-    };
-
-    axios
-      .post(process.env.cru, postData)
-      .then((response) => {
-        console.log(response.data);
-        if (response.data.success === true) {
-          res.status(200).json({
-            StatusCode: 6,
-            StatusMessage: response.data.message,
-            Data: response.data.data,
-          });
-        } else {
-          res.status(200).json({
-            StatusCode: -1,
-            StatusMessage: response.data.message,
-            Data: response.data.data,
-          });
-        }
-      })
-      .catch((error) => {
-        res.status(200).json({
-          StatusCode: -1,
-          StatusMessage: error.message,
-        });
-      });
-  } catch (error) {
-    console.log("error", error);
-    res.status(401).send({
-      StatusCode: 1,
-    });
-  } finally {
-    connection.end();
-  }
-};
-
 module.exports = {
   insertGame,
   updateGame,
@@ -619,5 +515,4 @@ module.exports = {
   LastTenWinners,
   StartGame,
   Getallgame,
-  CancelRoundbygameCode,
 };
